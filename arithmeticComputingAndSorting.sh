@@ -9,7 +9,7 @@ arithmeticOp2=$(((a*b)+c))
 arithmeticOp3=$((c+(a/b)))
 arithmeticOp4=$(((a%b)+c))
 
-function arraySortAscending() {
+function arraySortDescending() {
 	arrLength=${#resultArray[@]}
 	for (( i=0; i<$arrLength; i++ ))
 	do
@@ -18,7 +18,7 @@ function arraySortAscending() {
 		do
 			arrayValue1=${resultArray[j]}
 			arrayValue2=${resultArray[min]}
-			if [ $arrayValue1 -lt $arrayValue2 ]
+			if [ $arrayValue1 -gt $arrayValue2 ]
 			then
 				min=$j
 			fi
@@ -27,7 +27,7 @@ function arraySortAscending() {
 		resultArray[i]=${resultArray[min]}
 		resultArray[min]=$temp
 	done
-	echo "Sorted resultArray in Ascending order: ${resultArray[@]}"
+	echo "Sorted resultArray in Descending order: ${resultArray[@]}"
 }
 
 result[0]=$arithmeticOp1
@@ -42,4 +42,4 @@ done
 
 echo "resultArray: ${resultArray[@]}"
 
-arraySortAscending
+arraySortDescending
