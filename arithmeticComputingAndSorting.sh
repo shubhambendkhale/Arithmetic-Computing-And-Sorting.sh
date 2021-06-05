@@ -8,3 +8,4 @@ arithmeticOp3=$((c+(a/b)))
 arithmeticOp4=$(((a%b)+c))
 
 echo "ArithmeticOp1= $arithmeticOp1"
+echo "ArithmeticOp2= $arithmeticOp2"
