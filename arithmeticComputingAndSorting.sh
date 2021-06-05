@@ -1,3 +1,10 @@
-read -p "Enter 1st number: " fno
-read -p "Enter 2nd number: " sno
-read -p "Enter 3rd number: " tno
+read -p "Enter 1st number: " a
+read -p "Enter 2nd number: " b
+read -p "Enter 3rd number: " c
+
+arithmeticOp1=$((a+(b*c)))
+arithmeticOp2=$(((a*b)+c))
+arithmeticOp3=$((c+(a/b)))
+arithmeticOp4=$(((a%b)+c))
+
+echo "ArithmeticOp1= $arithmeticOp1"
