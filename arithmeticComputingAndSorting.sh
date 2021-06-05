@@ -1,4 +1,5 @@
 declare -A result
+declare -a resultArray
 read -p "Enter 1st number: " a
 read -p "Enter 2nd number: " b
 read -p "Enter 3rd number: " c
@@ -13,4 +14,9 @@ result[1]=$arithmeticOp2
 result[2]=$arithmeticOp3
 result[3]=$arithmeticOp4
 
-echo "result: ${result[@]}"
+for (( i=0; i<${#result[@]}; i++ ))
+do
+	resultArray[i]=${result[$i]}
+done
+
+echo "resultArray: ${resultArray[@]}"
